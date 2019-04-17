@@ -187,7 +187,7 @@ module Rake
       ###################################################################
 
       def self.replace_escaped_symbols(text)
-        copy_of_text = String.new(text)
+        copy_of_text = String.new(text.scrub(''))
 
         copy_of_text.gsub!(/\|/, "||")
 
